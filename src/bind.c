@@ -2,6 +2,7 @@
 #undef yy
 #define yy \
 xx(alpha/osf,    alphaIR) \
+xx(m1,   m1IR) \
 xx(mips/irix,    mipsebIR) \
 xx(sparc/sun,    sparcIR) \
 xx(sparc/solaris,solarisIR) \
