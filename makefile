@@ -61,6 +61,7 @@ RCCOBJS=$Balloc$O \
 	$Bm1$O \
 	$Bcpu32$O \
 	$Bmips$O \
+	$Bwu1000$O \
 	$Bsparc$O \
 	$Bstab$O \
 	$Bx86$O \
@@ -109,6 +110,7 @@ $Balpha$O:	$Balpha.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Balpha.c
 $Bm1$O:	$Bm1.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bm1.c
 $Bcpu32$O:	$Bcpu32.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bcpu32.c
 $Bmips$O:	$Bmips.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bmips.c
+$Bwu1000$O:	$Bwu1000.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bwu1000.c
 $Bsparc$O:	$Bsparc.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bsparc.c
 $Bx86$O:	$Bx86.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bx86.c
 $Bx86linux$O:	$Bx86linux.c;	$(CC) $(CFLAGS) -c -Isrc -o $@ $Bx86linux.c
@@ -118,6 +120,7 @@ $Balpha.c:	$Blburg$E src/alpha.md;    $Blburg src/alpha.md    $@
 $Bm1.c:	$Blburg$E src/m1.md;     $Blburg src/m1.md     $@
 $Bcpu32.c:	$Blburg$E src/cpu32.md;     $Blburg src/cpu32.md     $@
 $Bmips.c:	$Blburg$E src/mips.md;     $Blburg src/mips.md     $@
+$Bwu1000.c:	$Blburg$E src/wu1000.md;     $Blburg src/wu1000.md     $@
 $Bsparc.c:	$Blburg$E src/sparc.md;    $Blburg src/sparc.md    $@
 $Bx86.c:	$Blburg$E src/x86.md;      $Blburg src/x86.md      $@
 $Bx86linux.c:	$Blburg$E src/x86linux.md; $Blburg src/x86linux.md $@
@@ -227,7 +230,7 @@ testclean:
 
 clean::		testclean
 		$(RM) $B*$O
-		$(RM) $Bdagcheck.c $Balpha.c $Bcpu32.c $Bm1.c $Bmips.c $Bx86.c $Bsparc.c $Bx86linux.c
+		$(RM) $Bdagcheck.c $Balpha.c $Bcpu32.c $Bm1.c $Bmips.c $Bwu1000.c $Bx86.c $Bsparc.c $Bx86linux.c
 		$(RM) $Brcc1$E $Brcc1$E $B1rcc$E $B2rcc$E
 		$(RM) $B*.ilk
 
@@ -269,6 +272,7 @@ RCCSRCS=src/alloc.c \
 	$Bm1.c \
 	$Bcpu32.c \
 	$Bmips.c \
+	$Bwu1000.c \
 	$Bsparc.c \
 	$Bx86linux.c \
 	$Bx86.c
